@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Layout({ children }) {
 	return (
@@ -12,6 +13,14 @@ export default function Layout({ children }) {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
+			<header>
+				<Link href={'/'}>
+					<a>Home</a>
+				</Link>
+				<Link href={'/about'}>
+					<a>About</a>
+				</Link>
+			</header>
 
 			<main className='main'>{children}</main>
 
